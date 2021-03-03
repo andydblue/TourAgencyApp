@@ -15,7 +15,7 @@ public class Order {
         this.country = country;
         this.excursion = excursion;
         this.hotel = hotel;
-        orderNumber = customer.hashCode()+country.hashCode();
+        orderNumber = Math.abs(customer.hashCode()+country.hashCode());
         totalCoast = country.getFlightCoast()+hotel.getRoomCoast()+excursion.getExcursionCoast();
     }
 
