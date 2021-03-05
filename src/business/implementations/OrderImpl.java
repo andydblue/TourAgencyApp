@@ -17,7 +17,5 @@ public class OrderImpl implements OrderInterface {
     public boolean removeOrderByNumber(long number) { return orderDaoImplMySQL.removeOrderByOrderNumber(number); }
 
     @Override
-    public void addNewOrder(Order order) {
-        orderDaoImplMySQL.create(order);
-    }
+    public void addNewOrder(Order order) { orderDaoImplMySQL.create(order); }
 }

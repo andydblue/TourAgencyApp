@@ -14,6 +14,13 @@ public class Country {
         this.countrySeason = countrySeason;
     }
 
+    public Country(int id,String countryName, int flightCoast, Season countrySeason ) {
+        this.id = id;
+        this.countryName = countryName;
+        this.flightCoast = flightCoast;
+        this.countrySeason = countrySeason;
+    }
+
     public String getCountryName() {
         return countryName;
     }
@@ -44,5 +51,20 @@ public class Country {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        } else {
+            Country c = (Country) obj;
+            return this.getCountryName().equals(c.getCountryName()) && this.getId() == c.getId() && this.getFlightCoast() == c.getFlightCoast();
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return countryName.hashCode()+countrySeason.hashCode()+flightCoast+id;
     }
 }

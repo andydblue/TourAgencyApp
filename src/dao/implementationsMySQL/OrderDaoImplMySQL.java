@@ -27,21 +27,26 @@ public class OrderDaoImplMySQL extends ConnectionSetUp implements OrderDaoInterf
     @Override
     public Order create(Order order) {
         PreparedStatement statement = null;
-        try {
-            statement = connection.prepareStatement(INSERT_NEW_ORDER);
-            statement.setLong(1, order.getOrderNumber());
-            statement.setString(2, order.getCustomer());
-            statement.setString(3, order.getCountry().getCountryName());
-            statement.setString(4, order.getHotel().getHotelName());
-            statement.setString(5, order.getExcursion().getExcursionName());
-            statement.setLong(6, order.getTotalCoast());
-            statement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
+        if (order != null) {
             try {
-                if (statement != null) { statement.close(); }
-            } catch (SQLException e) {}
+                statement = connection.prepareStatement(INSERT_NEW_ORDER);
+                statement.setLong(1, order.getOrderNumber());
+                statement.setString(2, order.getCustomer());
+                statement.setString(3, order.getCountry().getCountryName());
+                statement.setString(4, order.getHotel().getHotelName());
+                statement.setString(5, order.getExcursion().getExcursionName());
+                statement.setLong(6, order.getTotalCoast());
+                statement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (statement != null) {
+                        statement.close();
+                    }
+                } catch (SQLException e) {
+                }
+            }
         }
         return order;
     }

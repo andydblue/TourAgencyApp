@@ -14,6 +14,13 @@ public class Hotel {
         this.roomCoast = roomCoast;
     }
 
+    public Hotel(int hotelCountryID, String hotelName, StarsRating starsRating, int roomCoast) {
+        this.hotelCountryID = hotelCountryID;
+        this.hotelName = hotelName;
+        this.starsRating = starsRating;
+        this.roomCoast = roomCoast;
+    }
+
     public int getRoomCoast() {
         return roomCoast;
     }
@@ -40,5 +47,20 @@ public class Hotel {
 
     public void setStarsRating(StarsRating starsRating) {
         this.starsRating = starsRating;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        } else {
+            Hotel h = (Hotel) obj;
+            return h.hotelName.equals(this.hotelName)&&h.hotelCountryID==this.hotelCountryID&&h.roomCoast==this.roomCoast&&h.getStarsRating().equals(this.getStarsRating());
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return hotelName.hashCode()+hotelCountryID+roomCoast+starsRating.hashCode();
     }
 }

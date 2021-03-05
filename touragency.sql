@@ -106,27 +106,27 @@ CREATE TABLE `hotels` (
 --
 
 INSERT INTO `hotels` (`id_htl`, `id_ctry_for_htl`, `hotelName`, `starsRating`, `roomCoast`) VALUES
-(2, 2, 'Tiflis Palace', '4', 57000),
-(3, 2, 'Lopota Lake Resort & Spa', '5', 87000),
-(4, 2, 'Hotel Terrace Kutaisi', '3', 29000),
-(5, 1, 'Electra Metropolis', '5', 122000),
-(6, 1, 'Acropolis View Hotel', '3', 55000),
-(7, 1, 'Phidias Piraeus Hotel', '2', 35800),
-(8, 3, 'Steigenberger Aldau Beach Hotel', '5', 107000),
-(9, 3, 'Sofitel Cairo Nile El Gezirah', '5', 59000),
-(10, 3, 'Tolip Resort El Galala Majestic', '5', 97000),
-(11, 7, 'Celal Aga Konagi Metro Hotel', '5', 41000),
-(12, 7, 'Sura Design Hotel & Suites', '4', 73000),
-(13, 7, 'Sealife Family Resort Hotel', '5', 65000),
-(14, 5, 'Riu Plaza España', '4', 113000),
-(15, 5, 'Palm Oasis Maspalomas', '3', 65000),
-(16, 5, 'El Avenida Palace', '4', 76000),
-(17, 4, 'Hotel Giolli Nazionale', '3', 40000),
-(18, 4, 'Hotel Abbazia', '3', 62000),
-(19, 4, 'The Square Milano Duomo', '4', 150000),
-(20, 6, 'Hôtel des Etats-Unis', '2', 68000),
-(21, 6, 'Radisson Blu Hotel, Lyon', '4', 109000),
-(22, 6, 'citizenM Paris Gare de Lyon', '4', 62800);
+(1, 2, 'Tiflis Palace', '4', 57000),
+(2, 2, 'Lopota Lake Resort & Spa', '5', 87000),
+(3, 2, 'Hotel Terrace Kutaisi', '3', 29000),
+(4, 1, 'Electra Metropolis', '5', 122000),
+(5, 1, 'Acropolis View Hotel', '3', 55000),
+(6, 1, 'Phidias Piraeus Hotel', '2', 35800),
+(7, 3, 'Steigenberger Aldau Beach Hotel', '5', 107000),
+(8, 3, 'Sofitel Cairo Nile El Gezirah', '5', 59000),
+(9, 3, 'Tolip Resort El Galala Majestic', '5', 97000),
+(10, 7, 'Celal Aga Konagi Metro Hotel', '5', 41000),
+(11, 7, 'Sura Design Hotel & Suites', '4', 73000),
+(12, 7, 'Sealife Family Resort Hotel', '5', 65000),
+(13, 5, 'Riu Plaza España', '4', 113000),
+(14, 5, 'Palm Oasis Maspalomas', '3', 65000),
+(15, 5, 'El Avenida Palace', '4', 76000),
+(16, 4, 'Hotel Giolli Nazionale', '3', 40000),
+(17, 4, 'Hotel Abbazia', '3', 62000),
+(18, 4, 'The Square Milano Duomo', '4', 150000),
+(19, 6, 'Hôtel des Etats-Unis', '2', 68000),
+(20, 6, 'Radisson Blu Hotel, Lyon', '4', 109000),
+(21, 6, 'citizenM Paris Gare de Lyon', '4', 62800);
 
 -- --------------------------------------------------------
 
